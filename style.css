@@ -1,23 +1,4 @@
-:root {
-  --color-primary: #eddede;
-  --color-secondary: #efabab;
-  --color-tertiary: #494450;
-
-  --color-text: #494450;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: var(--color-primary);
-}
-
-img {
-  max-width: 100%;
-}
+@import "css/base.css";
 
 .container {
   max-width: 1000px;
@@ -50,8 +31,13 @@ nav ul {
 }
 
 nav ul li a {
+  font-size: 0.8em;
+
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-text);
+  color: black;
 }
 
 /* Main Content */
@@ -61,6 +47,11 @@ main {
 }
 
 .main-content {
+  align-self: center;
+}
+
+.main-content p {
+  font-size: 1.2em;
 }
 
 .btn {
@@ -72,16 +63,29 @@ main {
   display: block;
   margin-top: 1em;
   max-width: fit-content;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .hero-image {
   max-width: 400px;
 }
 
-@media screen and (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr;
-  }
+/* Sections */
+section {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  margin: 2em 0;
+  gap: 1em;
+}
+
+.section-content {
+  align-self: center;
+}
+
+.section-image {
+  max-width: 300px;
 }
 
 /* Stats */
@@ -104,4 +108,24 @@ footer {
 
   background-color: var(--color-secondary);
   padding: 2em;
+}
+
+.footer-overlay {
+  position: absolute;
+  transform: scale(0.7);
+  bottom: 100%;
+  left: 50%;
+  z-index: 99;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+    padding: 1em 0;
+  }
 }
