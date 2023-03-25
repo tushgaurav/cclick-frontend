@@ -1,19 +1,41 @@
 {
-  "name": "cclick",
-  "short_name": "cclick is a link shortner service",
+  "name": "cclick, Share your clicks",
+  "short_name": "cclick",
+  "start_url": "/",
+  "orientation": "portrait",
+  "scope": "/",
   "icons": [
     {
-      "src": "/assets/images/favicon/android-chrome-192x192.png",
+      "src": "/assets/images/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/favicon/android-chrome-512x512.png",
+      "src": "/assets/images/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/assets/images/icons/maskable_icon_x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#efabab",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "description": "This app lets you add notes while you are coding",
+  "screenshots": [
+    {
+      "src": "assets/images/screenshot/ss_article.png",
+      "sizes": "390x540",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/screenshot/ss_footer.png",
+      "sizes": "389x541",
+      "type": "image/png"
+    }
+  ]
 }

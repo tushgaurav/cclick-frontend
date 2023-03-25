@@ -3,27 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <script src="app.js"></script>
 
     <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/favicon/apple-touch-icon.png"
-    />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/images/favicon/favicon-32x32.png"
+      href="assets/images/icons/favicon-32x32.png"
     />
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#efabab" />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon/favicon-16x16.png"
+      rel="apple-touch-icon"
+      href="assets/images/icons/apple-touch-icon.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
+    <script src="sw-register.js"></script>
 
     <link rel="stylesheet" href="style.css" />
     <title>cclick</title>
@@ -37,6 +39,7 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
+          <li id="install-btn">Install</li>
         </ul>
       </nav>
     </div>
@@ -122,33 +125,41 @@
     <div class="footer-container">
       <footer>
         <div class="footer-content">
-          <img src="assets/logo.svg" alt="" class="footer-logo" />
-          <h2>A <span>Prokits Digital Services</span> Product</h2>
-          <p>
-            cclick is a online tool that helps you to paste and share it with
-            people.
-          </p>
-          <ul class="socials">
-            <li>
-              <a href="#"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-            </li>
-          </ul>
+          <div class="footer-col">
+            <img src="assets/logo.svg" alt="" class="footer-logo" />
+            <h2>A <span>Prokits Digital Services</span> Product</h2>
+            <p>
+              cclick is a online tool that helps you to paste and share it with
+              people.
+            </p>
+          </div>
+          <div class="footer-col">
+            <ul>
+              <li>About Us</li>
+              <li>Contact</li>
+              <li>Social</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <ul>
+              <li>Request a Feature</li>
+              <li>Support the Development</li>
+              <li>Code of Conduct</li>
+              <li>Pricing</li>
+              <li>System Status</li>
+              <li>Report Abuse</li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-bottom">&copy; cclick | Designed by cclick</div>
-        <img
-          class="footer-overlay"
-          src="assets/images/logo_cc_overlay.png"
-          alt=""
-        />
+        <div class="line"></div>
+        <div class="footer-bottom">
+          <p>&copy; cclick 2023 | Designed by Prokits Digital Services</p>
+          <div>
+            <p>terms of use</p>
+            <p>privacy policy</p>
+          </div>
+        </div>
+        <div id="footer-sections"></div>
       </footer>
     </div>
   </body>

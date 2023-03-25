@@ -27,6 +27,7 @@
 body {
   background-color: var(--color-primary);
   font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -41,4 +42,11 @@ h5,
 h6 {
   font-family: "Helvetica", sans-serif;
   margin-bottom: 0.5em;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-tertiary);
+  margin: 1em 0;
 }
